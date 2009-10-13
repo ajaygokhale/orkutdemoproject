@@ -34,7 +34,7 @@
 	    alert ("Your browser does not support XML HTTP Request");
 	    return;
 	    }
-	  var url="getrssinfo.php";
+	  var url="http://orkutdemoproject.googlecode.com/svn/trunk/getrssinfo.php";
 	  alert('URL: ' + url );
 	  //url=url+"?q="+str;
 	  url=url+"&sid="+Math.random();
