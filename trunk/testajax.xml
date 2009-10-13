@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Javascript Test">
+    <Require feature="opensocial-0.7"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+    <script>
+    //Ajax Code
+	var xmlhttp;
+	
+	function showRSS(str)
+	  {
+	  xmlhttp=GetXmlHttpObject();
+	  if (xmlhttp==null)
+	    {
+	    alert ("Your browser does not support XML HTTP Request");
+	    return;
+	    }
+	  var url="getrssinfo.php";
+	  url=url+"?q="+str;
+	  url=url+"&sid="+Math.random();
+	  xmlhttp.onreadystatechange=stateChanged;
+	  xmlhttp.open("GET",url,true);
+	  xmlhttp.send(null);
+	  }
+
+	function showAJAX()
+	  {
+	  xmlhttp=GetXmlHttpObject();
+	  if (xmlhttp==null)
+	    {
+	    alert ("Your browser does not support XML HTTP Request");
+	    return;
+	    }
+	  var url="getrss.php";
+	  //url=url+"?q="+str;
+	  url=url+"&sid="+Math.random();
+	  xmlhttp.onreadystatechange=stateChanged;
+	  xmlhttp.open("GET",url,true);
+	  xmlhttp.send(null);
+	  }
+
+	
+	function stateChanged()
+	  {
+	  if (xmlhttp.readyState==4)
+	    {
+	    document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
+	    }
+	  }
+	
+	function GetXmlHttpObject()
+	{
+	if (window.XMLHttpRequest)
+	  {
+	  // code for IE7+, Firefox, Chrome, Opera, Safari
+	  return new XMLHttpRequest();
+	  }
+	if (window.ActiveXObject)
+	  {
+	  // code for IE6, IE5
+	  return new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	return null;
+	}    
+
+	function demo2()
+	{
+		alert('Test alert');
+		document.getElementById('friends').innerHTML = 'This is Frients List';
+	}
+
+
+    </script>
+      <div id='main'>
+        Your friends:
+        <div id='friends'></div>
+      </div>
+      <div id='test'>
+      <br>Test Javascript2
+      <a href="javascript:void(0);" onclick="javascript:demo2();">Click to Test demo2</a>
+      </div>
+      <hr>
+      <div id='rssOutput'>rssOutput</div>
+    ]]>
+  </Content>
+</Module>
