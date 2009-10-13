@@ -18,8 +18,10 @@
         <div id='friends'></div>
       </div>
       <div id='test'>
-      <br>Test Javascript      
-      <a href="javascript:void(0);" onclick="javascript:demo2();">Click to Test</a>
+      <br>Test Javascript2
+      <a href="javascript:void(0);" onclick="javascript:demo2();">Click to Test demo2</a>
+      <br>Test Javascript1      
+      <a href="javascript:void(0);" onclick="javascript:demo1();">Click to Test demo1</a>      
       </div>
     ]]>
   </Content>
