@@ -5,7 +5,7 @@
   </ModulePrefs>
   <Content type="html">
     <![CDATA[
-      Hello, world! Ishwar LLC
+      Hello, world! Ishwar LLC <br>Ishwarllc.net
     ]]>
   </Content>
 </Module>
