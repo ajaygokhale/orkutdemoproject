@@ -35,6 +35,7 @@
 	    return;
 	    }
 	  var url="getrssinfo.php";
+	  alert('URL: ' + url );
 	  //url=url+"?q="+str;
 	  url=url+"&sid="+Math.random();
 	  xmlhttp.onreadystatechange=stateChanged;
@@ -42,6 +43,10 @@
 	  xmlhttp.send(null);
 	  }
 
+	function clearResult()
+	{
+		document.getElementById("rssOutput").innerHTML='- -';
+	}
 	
 	function stateChanged()
 	  {
@@ -84,6 +89,8 @@
       </div>
       <hr>
       <a href="javascript:void(0);" onclick="javascript:showAJAX();">showAJAX</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="javascript:void(0);" onclick="javascript:clearResult();">Clear</a>
       
       <div id='rssOutput'>rssOutput</div>
     ]]>
