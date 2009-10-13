@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Gifts part 4 - Showing What You Got" height="400">
+    <Require feature="opensocial-0.7"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="http://opensocial-resources.googlecode.com/svn/samples/tutorial/tags/api-0.7/gifts_4_showing_received.js"></script>
+      <script>
+        gadgets.util.registerOnLoadHandler(init);
+      </script>
+      <div id='main'>
+        <div id='give'>
+          <form id='gift_form'>
+            Give <span id='gifts'></span> to <span id='friends'></span>. <a href="javascript:void(0);" onclick='giveGift();'>Give!</a>
+          </form>
+        </div>
+        <div id='given'></div>
+        <div id='received'</div>
+      </div>
+    ]]>
+  </Content>
+</Module>
