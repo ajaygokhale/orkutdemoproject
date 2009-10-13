@@ -17,7 +17,7 @@
 	    alert ("Your browser does not support XML HTTP Request");
 	    return;
 	    }
-	  var url="getrssinfo.php";
+	  var url="getrss.php";
 	  url=url+"?q="+str;
 	  url=url+"&sid="+Math.random();
 	  xmlhttp.onreadystatechange=stateChanged;
@@ -34,7 +34,7 @@
 	    alert ("Your browser does not support XML HTTP Request");
 	    return;
 	    }
-	  var url="getrss.php";
+	  var url="getrssinfo.php";
 	  //url=url+"?q="+str;
 	  url=url+"&sid="+Math.random();
 	  xmlhttp.onreadystatechange=stateChanged;
