@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Javascript Test">
+    <Require feature="opensocial-0.7"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="js1.js"></script>
+      <div id='main'>
+        Your friends:
+        <div id='friends'></div>
+      </div>
+      <div id='test'>
+      <br>Test Javascript      
+      <a href="javascript:void(0);" onclick='demo1();'>Click to Test</a>
+      </div>
+    ]]>
+  </Content>
+</Module>
