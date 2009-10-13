@@ -27,6 +27,7 @@
 
 	function showAJAX()
 	  {
+	  alert('Request in showAJAX');
 	  xmlhttp=GetXmlHttpObject();
 	  if (xmlhttp==null)
 	    {
@@ -82,6 +83,8 @@
       <a href="javascript:void(0);" onclick="javascript:demo2();">Click to Test demo2</a>
       </div>
       <hr>
+      <a href="javascript:void(0);" onclick="javascript:showAJAX();">showAJAX</a>
+      
       <div id='rssOutput'>rssOutput</div>
     ]]>
   </Content>
