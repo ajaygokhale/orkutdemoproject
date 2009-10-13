@@ -6,13 +6,20 @@
   <Content type="html">
     <![CDATA[
       <script src="js1.js"></script>
+      <script>
+      function demo2()
+      {
+      	alert('Test alert');
+		document.getElementById('friends').innerHTML = 'This is Frients List';
+		}
+		</script>
       <div id='main'>
         Your friends:
         <div id='friends'></div>
       </div>
       <div id='test'>
       <br>Test Javascript      
-      <a href="javascript:void(0);" onclick='demo1();'>Click to Test</a>
+      <a href="javascript:void(0);" onclick="javascript:demo2();">Click to Test</a>
       </div>
     ]]>
   </Content>
