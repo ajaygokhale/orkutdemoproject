@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+.thought_main {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12pt;
+text-align:left;
+}
+
+.thought_by {
+font-family:Arial, Helvetica, sans-serif;
+font-size:10pt;
+font-weight:bold;
+text-align:right;
+}
+
+.thborder {
+border:dashed #C3C3C3;
+border-width:1px;
+background-color:#F6F6F6;
+}

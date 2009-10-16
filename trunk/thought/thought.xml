@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="Daily Thought - I Love GOD" title_url="http://www.ishwarllc.net" description="Daily Thought - I Love GOD"
+               author_photo="http://www.udyojakmagazine.com/thought/RedHat.jpg"
+               author_aboutme="I Love GOD - Ajay"
+               author_link="http://www.udyojakmagazine.com/"
+               author_quote="I Love GOD"
+               author="Ajay Gokhale" 
+               author_email="ajaygokhale@gmail.com" 
+               thumbnail="http://www.udyojakmagazine.com/thought/thought_thumb.jpg" 
+               screenshot="http://www.udyojakmagazine.com/thought/thought_thumb.jpg"              
+               >
+    <Require feature="opensocial-0.7" />
+    <Require feature="setprefs" />
+  </ModulePrefs>   
+  <Content type="html">
+  <![CDATA[ 
+    <style> #content_div_2 { font-size: 80%; background-color: #FFFFBF;} </style>
+    <style>
+		.thought_main {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12pt;
+		text-align:left;
+		}
+		
+		.thought_by {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:10pt;
+		font-weight:bold;
+		text-align:right;
+		}
+		
+		.thborder {
+		border:dashed #C3C3C3;
+		border-width:1px;
+		background-color:#F6F6F6;
+		}    
+    </style>
+ 
+    <div id=content_div></div>
+     <script type="text/javascript">
+     // Get userprefs
+     /**
+     var prefs = new _IG_Prefs();
+     
+     var indust = prefs.getString("industry");
+     var spec = prefs.getString("specific");
+     var cit = prefs.getString("city");
+     
+     if (indust == null)
+     {
+         alert("cannot display Jobs.");         
+     }
+     **/
+    function my_callback_function(responseText) 
+    {
+      if (responseText == null) return;         
+      _gel("content_div").innerHTML = responseText; 
+    }            
+        
+    // Here the callback is invoked by name
+    //alert('Callback in invoked');
+    _IG_FetchContent("http://ajaygokhale.net/news/read_thought.php",my_callback_function); 
+           
+  </script>
+<!-- width="300" height="250" -->
+
+  ]]> 
+  </Content>
+</Module>
