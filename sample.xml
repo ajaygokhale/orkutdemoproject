@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<Module>
+  <ModulePrefs title="Ishwar LLC - I Love GOD" title_url="http://www.ishwarllc.net" description="Ishwar LLC - I Love GOD"
+               author_photo="http://www.ishwarllc.net/xml/ajax/RedHat.jpg"
+               author_aboutme="I Love GOD"
+               author_link="http://www.ishwarllc.net"
+               author_quote="I Love GOD"
+               author="Ishwar LLC Team" 
+               author_email="ajay.gokhale@ishwarllc.com" 
+               thumbnail="http://www.ishwarllc.net/xml/ajax/RedHat.jpg" 
+               screenshot="http://www.ishwarllc.net/xml/ajax/RedHat.jpg"              
+               width="300"
+               height="250">
+    <Require feature="opensocial-0.7" />
+    <Require feature="setprefs" />
+  </ModulePrefs>   
+  <Content type="html">
+  <![CDATA[ 
+    <style> #content_div { font-size: 80%; background-color: #FFFFBF;} </style>
+ 
+    <div id=content_div></div>
+     <script type="text/javascript">
+     // Get userprefs
+     var prefs = new _IG_Prefs();
+     
+     var indust = prefs.getString("industry");
+     var spec = prefs.getString("specific");
+     var cit = prefs.getString("city");
+     
+     if (indust == null)
+     {
+         alert("cannot display Jobs.");         
+     }
+    function my_callback_function(responseText) 
+    {
+      if (responseText == null) return;         
+      _gel("content_div").innerHTML = responseText; 
+    }            
+        
+    // Here the callback is invoked by name
+    //alert('Callback in invoked');
+    _IG_FetchContent("http://www.ishwarllc.net/xml/ajax/getrssinfo.php",my_callback_function); 
+           
+  </script>
+  ]]> 
+  </Content>
+</Module>
