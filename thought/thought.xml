@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="Daily Thought - I Love GOD" title_url="http://www.ishwarllc.net" description="Daily Thought - I Love GOD"
-               author_photo="http://www.udyojakmagazine.com/thought/RedHat.jpg"
+               author_photo="http://www.ishwarllc.net/xml/thought/RedHat.jpg"
                author_aboutme="I Love GOD - Ajay"
-               author_link="http://www.udyojakmagazine.com/"
+               author_link="http://www.ishwarllc.net/"
                author_quote="I Love GOD"
                author="Ajay Gokhale" 
-               author_email="ajaygokhale@gmail.com" 
-               thumbnail="http://www.udyojakmagazine.com/thought/thought_thumb.jpg" 
-               screenshot="http://www.udyojakmagazine.com/thought/thought_thumb.jpg"              
+               author_email="ajay.gokhale@ishwarllc.com" 
+               thumbnail="http://www.ishwarllc.net/xml/thought/thought_thumb.jpg" 
+               screenshot="http://www.ishwarllc.net/xml/thought/thought_thumb.jpg"              
                >
     <Require feature="opensocial-0.7" />
     <Require feature="setprefs" />
@@ -60,7 +60,7 @@
         
     // Here the callback is invoked by name
     //alert('Callback in invoked');
-    _IG_FetchContent("http://ajaygokhale.net/news/read_thought.php",my_callback_function); 
+    _IG_FetchContent("http://www.ishwarllc.net/xml/thought/read_thought.php",my_callback_function); 
            
   </script>
 <!-- width="300" height="250" -->
